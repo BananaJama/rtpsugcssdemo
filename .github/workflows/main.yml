@@ -24,6 +24,7 @@ jobs:
         azcliversion: 2.0.72
         inlineScript: |
             az storage blob upload-batch --account-name rtpsugcssdemo -d '$web' -s .
+  
   # Azure logout 
     - name: logout
       run: |
