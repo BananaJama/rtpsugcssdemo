@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: RTPSUGCSSDEMO Static Website CSS
+
+# Controls when the action will run. 
+on:
+    push:
+        branches: [ master ]
+    pull_request:
+        branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:            
+    - uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.RTPSUGCSS_CREDENTIALS }}
+          
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+            az storage blob upload-batch --account-name rtpsugcssdemo -d '$web' -s .
+  # Azure logout 
+    - name: logout
+      run: |
+            az logout
