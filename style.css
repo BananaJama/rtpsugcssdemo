@@ -1,4 +1,7 @@
 h1{ text-align:center; }
+p{ text-align:center }
 
-
+.a{ text-align:left; color:blue }
 .container{ max-width:1000px; margin:auto }
+
+table{  }
