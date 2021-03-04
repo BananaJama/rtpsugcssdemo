@@ -3,7 +3,8 @@ h1{ color:#fff }
 .container h1{ color:#333; }
 
 
-table{ border:1px solid #333; }
+table{ border:1px solid #333; border-collapse:collapse; }
 tr:nth-child(odd){ background:#efefef; }
+tr:hover{ background:aqua }
 td{ border:1px solid #333; }
-p{ padding:20px; }
+p{ padding:5px 20px 5px 10px; }
