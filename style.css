@@ -1,1 +1,9 @@
-table{  }
+.container{ text-align:center; }
+h1{ color:#fff }
+.container h1{ color:#333; }
+
+
+table{ border:1px solid #333; }
+tr:nth-child(odd){ background:#efefef; }
+td{ border:1px solid #333; }
+p{ padding:20px; }
