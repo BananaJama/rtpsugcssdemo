@@ -8,3 +8,6 @@ tr:nth-child(odd){ background:#efefef; }
 tr:hover{ background:aqua }
 td{ border:1px solid #333; }
 p{ padding:5px 20px 5px 10px; }
+
+.flex{ display:flex; flex-wrap:wrap }
+.flex div{ width:25%; height:100px; margin:20px; background:blue; min-width:250px; }
